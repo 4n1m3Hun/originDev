@@ -163,3 +163,91 @@ nav a ~ a{
     display: inline-block;
     margin: 0;
 }
+/* Categories */
+.categories #card{
+    box-sizing: border-box;
+    padding: 1em;
+}
+.categories .img img{
+    max-height: 250px;
+    min-height: 250px;
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.categories .img{
+    position: relative;
+}
+.categories .img span{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--border);
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: rgba(33, 37, 41, 0.3);
+    padding: 2px 9px;
+    border-radius: 2px;
+}
+.cat_data span, .cat_data p{
+    color: var(--font3);
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.cat_data hr{
+    color: var(--font1);
+    margin: 15px 0;
+    opacity: 0.3;
+}
+.cat_data h3{
+    color: var(--darkback);
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 700;
+}
+.row, .cat-top{
+    width: 75%;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cat-top{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.cat-top h3, .cat-top .btn button{
+    color: var(--font3);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 25px;
+}
+.cat-top .btn button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.cat-top .btn button ~ button{
+    margin-left: 1em;
+} 
+.cat-top .btn .inactive{
+    opacity: 0.5;
+}
+.allcat{
+    background-color: var(--darkback);
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 400;
+    color: var(--border);
+    border-radius: 3px;
+    border: none;
+    padding: 0.5em 4em;
+    cursor: pointer;
+    margin-top: 60px;
+}

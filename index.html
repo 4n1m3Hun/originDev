@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vence</title>
+    <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,7 +40,7 @@
           <span>1/5</span>
         </div>
       </div>
-      <div class="content sl2">
+      <div class="content">
         <div class="datas">
           <span class="date">
             30.Jun.2022
@@ -112,6 +113,118 @@
         </div>
       </div>
   </section>
+  <section class="categories">
+    <div class="cat-top">
+      <h3>Categories+</h3>
+      <div class="btn">
+        <button onclick="to3col()" id="to3">3 Column</button>
+        <button onclick="to4col()" class="inactive" id="to4">4 Column</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4" id="card">
+        <div class="img">
+          <img src="cat1.jpg" alt="catpng">
+          <span>CREATIVE</span>
+        </div>
+        <div class="cat_data">
+          <span>29.jun.2021</span>
+          <h3>Instagram artists with great photography skills</h3>
+          <p>Many years ago, I worked for my parents who own a video production company.</p>
+          <hr>
+          <span>By: Peter Rowardson</span>
+        </div>
+      </div>
+      <div class="col-4" id="card">
+        <div class="img">
+          <img src="cat2.jpg" alt="catpng">
+          <span>CREATIVE</span>
+        </div>
+        <div class="cat_data">
+          <span>29.jun.2021</span>
+          <h3>The 20 best creative & strong handmade of 2022</h3>
+          <p>Many years ago, I worked for my parents who own a video production company.</p>
+          <hr>
+          <span>By: Peter Rowardson</span>
+        </div>
+      </div>
+      <div class="col-4" id="card">
+        <div class="img">
+          <img src="cat3.jpg" alt="catpng">
+          <span>CREATIVE</span>
+        </div>
+        <div class="cat_data">
+          <span>29.jun.2021</span>
+          <h3>Apartamento at ten: A decade of celebrating the everyday</h3>
+          <p>Many years ago, I worked for my parents who own a video production company.</p>
+          <hr>
+          <span>By: Peter Rowardson</span>
+        </div>
+      </div>
+      <div class="col-4" id="card">
+        <div class="img">
+          <img src="cat4.jpg" alt="catpng">
+          <span>CREATIVE</span>
+        </div>
+        <div class="cat_data">
+          <span>29.jun.2021</span>
+          <h3>Alessandro Novelli’s animation plays with ANDRE</h3>
+          <p>Many years ago, I worked for my parents who own a video production company.</p>
+          <hr>
+          <span>By: Peter Rowardson</span>
+        </div>
+      </div>
+      <div class="col-4" id="card">
+        <div class="img">
+          <img src="cat5.jpg" alt="catpng">
+          <span>CREATIVE</span>
+        </div>
+        <div class="cat_data">
+          <span>29.jun.2021</span>
+          <h3>Aron Klein’s captivating images of the UDEA</h3>
+          <p>Many years ago, I worked for my parents who own a video production company.</p>
+          <hr>
+          <span>By: Peter Rowardson</span>
+        </div>
+      </div>
+      <div class="col-4" id="card">
+        <div class="img">
+          <img src="cat6.jpg" alt="catpng">
+          <span>CREATIVE</span>
+        </div>
+        <div class="cat_data">
+          <span>29.jun.2021</span>
+          <h3>Renzo Patton combines design and nature</h3>
+          <p>Many years ago, I worked for my parents who own a video production company.</p>
+          <hr>
+          <span>By: Peter Rowardson</span>
+        </div>
+      </div>
+    </div>
+    <button class="allcat">More Articles</button>
+  </section>
+  <script>
+    function to4col(){
+      const elements = Array.from(document.getElementsByClassName("col-4"));
 
+      elements.forEach(element => {
+        element.className = "col-3";
+      });
+
+      document.getElementById("to3").className = "inactive";
+      document.getElementById("to4").className = "";
+    }
+
+    function to3col(){
+      const elements = Array.from(document.getElementsByClassName("col-3"));
+
+      elements.forEach(element => {
+        element.className = "col-4";
+      });
+
+      document.getElementById("to4").className = "inactive";
+      document.getElementById("to3").className = "";
+    }
+  </script>
 </body>
 </html>
