@@ -27,7 +27,7 @@ body{
 }
 /*navigációs sáv kialakítása dizájn*/
 header{
-    position: fixed;
+    position: absolute ;
     top: 0;
     left: 0;
     right: 0;
@@ -401,3 +401,119 @@ footer{
     transform: translateY(0);
     opacity: 1;
   }
+
+/*reszponziv*/
+@media only screen and (max-width: 1280px) {
+    .categories .img img, .bList .img img{
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .cat_data h3, .bList_data h3{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .cat_data span, .cat_data p, .bList span, .bList p, .tops .top span, .tops .top p{
+        font-size: 10px;
+    }
+    .row, .cat-top, .bList-top{
+        width: 90%;
+    }
+    .left{
+        padding: 40px 30px;
+    }
+    .tops .top img{
+        height: 120px;
+        width: 120px;
+    }
+    .tops .top h4{
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    .tops .top span{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .categories .img img, .bList .img img{
+        max-height: 100px;
+        min-height: 100px;
+    }
+    .cat_data h3, .bList_data h3{
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .cat_data span, .cat_data p, .bList span, .bList p, .tops .top span, .tops .top p{
+        font-size: 8px;
+    }
+    .left{
+        padding: 30px 20px;
+    }
+    .tops .top img{
+        height: 100px;
+        width: 100px;
+    }
+    .tops .top h4{
+        font-size: 10px;
+        margin: 5px 0;
+    }
+    .tops .top span{
+        font-size: 8px;
+    }
+    .right h4{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .date{
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .content h3{
+        font-size: 20px;
+        line-height: 25px;
+        max-width: 400px;
+    }
+    .content p{
+        font-size: 10px;
+        line-height: 15px;
+        max-width: 350px;
+    }
+    .datas{
+        padding-bottom: 25px;
+        padding-left: 25px;
+    }
+    .news{
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        min-height: 300px;
+    }
+    .content{
+        width: 100%;
+        min-width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .footer .ftop a, .footer .fbottom span{
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .left{
+        width: 100%;
+    }
+    .right{
+        display: none;
+    }
+    .footer .ftop a, .footer .fbottom span{
+        font-size: 8px;
+        line-height: 15px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .cat-top .btn{
+        display: none;
+    }
+}
