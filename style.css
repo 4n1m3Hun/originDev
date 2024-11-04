@@ -163,8 +163,8 @@ nav a ~ a{
     display: inline-block;
     margin: 0;
 }
-/* Categories */
-.categories #card{
+/* Categories, bList */
+.categories #card, .bList #card{
     box-sizing: border-box;
     padding: 1em;
 }
@@ -176,10 +176,18 @@ nav a ~ a{
     object-fit: cover;
     border-radius: 3px;
 }
-.categories .img{
+.bList .img img{
+    max-height: 200px;
+    min-height: 200px;
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.categories .img, .bList .img{
     position: relative;
 }
-.categories .img span{
+.categories .img span, .bList .img span{
     position: absolute;
     top: 15px;
     right: 25px;
@@ -191,13 +199,13 @@ nav a ~ a{
     padding: 2px 9px;
     border-radius: 2px;
 }
-.cat_data span, .cat_data p{
+.cat_data span, .cat_data p, .bList span, .bList p{
     color: var(--font3);
     font-size: 12px;
     line-height: 20px;
     font-weight: 400;
 }
-.cat_data hr{
+.cat_data hr, .bList hr{
     color: var(--font1);
     margin: 15px 0;
     opacity: 0.3;
@@ -208,13 +216,19 @@ nav a ~ a{
     line-height: 40px;
     font-weight: 700;
 }
-.row, .cat-top{
+.row, .cat-top, .bList-top{
     width: 75%;
 }
-.categories{
+.bList-top{
+    margin-bottom: 50px;
+}
+.categories, .bList{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.bList{
+    margin-top: 60px;
 }
 .cat-top{
     margin-top: 80px;
@@ -227,6 +241,12 @@ nav a ~ a{
     font-weight: 400;
     font-size: 12px;
     line-height: 25px;
+}
+.bList-top h3{
+    color: var(--font3);
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 20px;
 }
 .cat-top .btn button{
     background-color: transparent;
@@ -329,3 +349,55 @@ nav a ~ a{
     max-width: 393px;
     text-align: center;
 }
+/*Footer*/
+footer{
+    padding: 90px 60px;
+    background-color: var(--darkback);
+    margin-top: 60px;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px
+}
+.footer .ftop, .footer .fbottom{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.footer .ftop a ~ a{
+    margin-left: 10px;
+}
+.footer .ftop a{
+    text-decoration: none;
+    color: var(--border);
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.footer hr{
+    width: 100%;
+    color: var(--font1);
+    opacity: 0.2;
+}
+.footer .fbottom span{
+    color: var(--border);
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+/*scroll*/
+.reveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .reveal.act{
+    transform: translateY(0);
+    opacity: 1;
+  }
